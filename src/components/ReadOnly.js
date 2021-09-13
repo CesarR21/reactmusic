@@ -9,7 +9,7 @@ const ReadOnly = ({ song, handleEditClick, handleDeleteClick }) => {
       <td>{song.album}</td>
       <td>{song.artist}</td>
       <td>{song.genre}</td>
-      <td>{song.release_date}</td>
+      <td>{song.releaseDate}</td>
       
       <td>
         <button

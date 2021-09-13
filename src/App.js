@@ -13,7 +13,7 @@ const App = () => {
     artist: "",
     album: "",
     genre:"",
-    release_date:""
+    release_date:"",
   });
 
   const [editFormData, setEditFormData] = useState({
@@ -22,7 +22,7 @@ const App = () => {
     artist: "",
     album: "",
     genre:"",
-    release_date:""
+    release_date:"",
   });
 
   const [editSongId, setEditSongId] = useState(null);
@@ -55,15 +55,15 @@ const App = () => {
     event.preventDefault();
 
     const newSong = {
-      song: nanoid(),
+      song:  addFormData.song,
       title: addFormData.title,
       artist: addFormData.artist,
       album: addFormData.album,
       genre: addFormData.genre,
-      release_date: addFormData.release_date
+      release_date: addFormData.release_date,
     };
 
-    const newSongs = [...songs, newSongs];
+    const newSongs = [songs, newSong];
     setSongs(newSongs);
   };
 
@@ -76,7 +76,7 @@ const App = () => {
       artist: editFormData.artist,
       album: editFormData.album,
       genre: editFormData.genre,
-      release_date:editFormData.release_date
+      release_date:editFormData.release_date,
     };
 
     const newSongs = [...songs];
@@ -99,7 +99,7 @@ const App = () => {
       artist: song.artist,
       album: song.album,
       genre: song.genre,
-      release_date: song.release_date
+      release_date: song.release_date,
     };
 
     setEditFormData(formValues);
@@ -128,9 +128,9 @@ const App = () => {
               <th>Song</th>
               <th>Title</th>
               <th>Album</th>
-              <th>Artis</th>
+              <th>Artist</th>
               <th>Genre</th>
-              <th>Release_Date</th>
+              <th>Release Date</th>
               
             </tr>
           </thead>
@@ -180,21 +180,21 @@ const App = () => {
           onChange={handleAddFormChange}
         />
         <input
-          type="email"
+          type="text"
           name="artist"
           required="required"
           placeholder="Enter an artist..."
           onChange={handleAddFormChange}
         />
          <input
-          type="email"
+          type="text"
           name="genre"
           required="required"
           placeholder="Enter a genre..."
           onChange={handleAddFormChange}
         />
          <input
-          type="email"
+          type="text"
           name="release_date"
           required="required"
           placeholder="Enter a release date..."

@@ -12,8 +12,8 @@ const TableEdit = ({
           type="text"
           required="required"
           placeholder="Enter a song..."
-          name="song title"
-          value={editFormData.song}
+          name="songTitle"
+          value={editFormData.songTitle}
           onChange={handleEditFormChange}
         ></input>
       </td>
@@ -51,9 +51,9 @@ const TableEdit = ({
       <input
           type="text"
           required="required"
-          placeholder="Enter release_date..."
-          name="release_date"
-          value={editFormData.release_date}
+          placeholder="Enter releaseDate..."
+          name="releaseDate"
+          value={editFormData.releaseDate}
           onChange={handleEditFormChange}
         ></input>
         
